@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Automatic Image Slider</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- -----------------------------------------------------  HEADER --------------------------------------------------------------------------------- -->
+    <header>
+      <ul class="page1">
+        <li><a href="#" id="mail"><span>Email Us : </span>dkcoding@gmail.com</a></li>
+        <li>
+          <a href="#">Sosial Media</a>
+          <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="icon"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="icon"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" class="icon"><i class="fa-brands fa-x-twitter"></i></a>
+        </li>
+        
+        <li><a href="#"><span>Need Help? : </span>tel+62 813 1411 6937</a></li>
+       <div class="language-img">
+        <img src="Img/eng.png" onclick="setLanguage('en')"></img>
+        <img src="Img/ind.png" onclick="setLanguage('id')"></img></div>
+      </ul>
+      
+    </header>
+<!-- -----------------------------------------------------ENDING HEADER --------------------------------------------------------------------------------- -->
+
+
+<!-- ----------------------------------------------------- NAVIGATION BAR --------------------------------------------------------------------------------- -->
+<nav>
+    <div class="logo">
+      <img src="Img/dk1.png" alt="dklogo" >
+    </div>
+
+      <div class="menuicon" id="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    
+
+        <ul class="hidden" id="menu-list">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li>
+              <a href="#services">PRODUCT</a>
+              <ul class="dropdown">
+                <li><a href="#web-design">Link 1</a></li>
+                <li><a href="#seo">Link 2</a></li>
+                <li><a href="#marketing">Link 3</a></li>
+                <li><a href="#marketing">Link 4</a></li>
+                <li><a href="#web-design">Link 5</a></li>
+                <li><a href="#seo">Link 6</a></li>
+                <li><a href="#marketing">Link 7</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#services">CATALOG</a>
+              <ul class="dropdown">
+                <li><a href="#web-design">Catalog 1</a></li>
+                <li><a href="#seo">Catalog 2</a></li>
+              </ul>
+            </li>
+            <li><a href="#portfolio">SERVICES</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+
+    <div class="search-container" id="
+    search">
+      <!--     <form action="/action_page.php">
+           <input type="text" placeholder="Search.." name="search">-->
+
+        <button onclick="myFunction()"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+   
+   
+
+</nav>
+
+<!-- ----------------------------------------------------- ENDING NAVIGATION BAR --------------------------------------------------------------------------------- -->
+
+
+
+<!-----------------------------------------  SLIDER CONTAINER IMAGE --------------------------------------------------------------->
+<div class="container">
+  <div class="slider">
+    <div class="slides fade">
+        <img src="Img/i1.jpg" alt="Image 1" />
+
+        <div class="text-container">
+        <div class="hero-text">
+          <h1>LOREM IPSUM </h1>
+          <p>Lorem ipsum dolor, sit amet consectetur  elit. <br>Corporis dignissimos voluptas? it amet consectetur adipisicing elit....</p><br><br><br>
+          <button class="btn-hero">Read More</button>
+        </div>
+        </div>
+        
+    </div>
+    <div class="slides fade">
+        <img src="Img/i2.jpg" alt="Image 2" />
+
+        <div class="text-container">
+          <div class="hero-text">
+            <h1>LOREM IPSUM</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>Corporis quae facere dignissimos voluptas? Dolore.</p><br><br><br>
+            <button class="btn-hero">Read More</button>
+          </div>
+          </div>
+
+
+    </div>
+    <div class="slides fade">
+        <img src="Img/i3.jpg" alt="Image 3" />
+
+        <div class="text-container">
+          <div class="hero-text">
+            <h1>LOREM IPSUM</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p><br><br><br>
+            <button class="btn-hero">Read More</button>
+          </div>
+          </div>
+
+
+    </div>
+    <div class="slides fade">
+        <img src="Img/i4.jpg" alt="Image 4" />
+
+        <div class="text-container">
+          <div class="hero-text">
+            <h1>LOREM IPSUM</h1>
+            <p>Lorem ipsum dolor. <br>Corporis quae facere dignissimos voluptas? Dolore.</p><br><br><br>
+            <button class="btn-hero">Read More</button>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Konten Halaman -->
+    <div class="content" id="content">
+      <p>WELCOME TO OUR WEBSITE</p>
+      <p1>DK CODING WEBSITE</p1>
+
+      <div class="img-container">
+        <div class="container-img">
+          <img src="Img/sq-01.jpg" alt="Avatar" class="image">
+          <div class="overlay">Desk Product 1</div>
+        </div>
+        <div class="container-img">
+          <img src="Img/sq-01.jpg" alt="Avatar" class="image">
+          <div class="overlay">Desk Product 2</div>
+        </div>
+        <div class="container-img">
+          <img src="Img/sq-01.jpg" alt="Avatar" class="image">
+          <div class="overlay">Desk Product 3</div>
+        </div>
+        <div class="container-img">
+          <img src="Img/sq-01.jpg" alt="Avatar" class="image">
+          <div class="overlay">Desk Product 4</div>
+        </div>
+        <div class="container-img">
+          <img src="Img/sq-01.jpg" alt="Avatar" class="image">
+          <div class="overlay">Desk Product 5</div>
+        </div>
+        <div class="container-img">
+          <img src="Img/sq-01.jpg" alt="Avatar" class="image">
+          <div class="overlay">Desk Product 6</div>
+        </div>
+    </div>
+    </div>
+    <!-- Parallax -->
+
+<div class="parallax-img">
+
+  <div class="parallax-text">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Pariatur obcaecati autem magni recusandae perspiciatis nulla? 
+    Voluptate adipisci beatae impedit quam magnam nam praesentium 
+    reprehenderit necessitatibus.</p>
+  </div>
+
+
+</div>
+
+    <!-- OUR TEAM -->
+
+<div class="ourteam">
+  <div class="our">
+  <h1>OUR TEAM</h1>
+<p>We Create The Best Team Ever</p>
+</div>
+</div>
+
+
+<div class="asal">
+  <div class="muasal">
+
+    <div class="mainteam">
+      <div class="team1">
+        <img src="Img/WG.jpg" alt="">
+      </div>
+      <div class="text-team1">
+        <h1>HALLO</h1>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita qui molestias odit, itaque quisquam, recusandae alias quis iure animi aliquid cum mollitia. Inventore doloribus corrupti ipsum magni incidunt perferendis, alias beatae pariatur atque soluta assumenda.</p>
+        <button class="mainbtn">READ MORE</button>
+      </div>
+    </div>
+
+    <div class="secteam">
+      <div class="team2">
+        <img src="Img/wg1.jpg" alt="">
+      </div>
+      <div class="text-team2">
+        <h1>HALLO</h1>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ipsam beatae laudantium nemo deleniti optio debitis, laboriosam, illum culpa magni, sint dicta provident consequatur sequi quae quam. Impedit, neque facere amet dolorem illum voluptas quo!</p>
+        <button class="mainbtn">READ MORE</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+    <!-- CARD CONTAIN -->
+
+<div class="cardcontain">
+  <div class=" card">
+    <div class="cardbox">
+      <img src="Img/card1.png" alt="card1" width="80px" height="80px"><p>card deskription Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit a odio voluptate dignissimos.</p>
+    </div>
+    <div class="cardbox">
+      <img src="Img/card2.png" alt="card2" width="80px" height="80px"> <p>card deskription Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus vitae repellat dolor alias, suscipit sunt.</p>
+    </div>
+    <div class="cardbox">
+      <img src="Img/card3.png" alt="card3" width="80px" height="80px"> <p>card deskription Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam mollitia dolorem eaque.</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- FOOTER -->
+
+
+<div class="footer-contain">
+  <div class="footer">
+    <div class="footerbox">
+
+      <div class="footerbox1">
+        <ul>
+          <li>
+            <h1>GET IN TOUCH</h1>
+          </li> <br><br>
+          <li>
+            <a href="#"><i class="fa-solid fa-phone"></i> Lorem Ipsum</a>
+          </li><li>
+            <a href="#"><i class="fa-solid fa-phone"></i> Lorem Ipsum</a>
+          </li><li>
+            <a href="#"> <i class="fa-regular fa-envelope"></i> Lorem Ipsum</a>
+          </li><li>
+            <a href="#"><i class="fa-regular fa-map"></i> Lorem Ipsum</a>
+          </li><li>
+            <h1>FOLLOW US</h1>
+          </li><li>
+              <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#" class="icon"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="icon"><i class="fa-brands fa-tiktok"></i></a>
+              <a href="#" class="icon"><i class="fa-brands fa-x-twitter"></i></a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="footerbox">
+        <ul>
+          <li>
+            <h1>CONTACT US</h1>
+          </li>
+          <br><br>
+          <li>
+            <img src="Img/qr.png" width="220px" alt="qr"> 
+          </li>
+          <li>
+            <a href="#">Call Us on WhatsApp</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footerbox2">
+        <ul>
+          <li>
+            <h1>OUR SERVICES</h1>
+          </li><br><br>
+          <li>
+            <a href="#"><i class="fa-regular fa-gem"> </i> Lorem Ipsum</a>
+          </li><li>
+            <a href="#"><i class="fa-regular fa-gem"> </i> Lorem Ipsum</a>
+          </li><li>
+            <a href="#"><i class="fa-regular fa-gem"> </i> Lorem Ipsum</a>
+          </li><li>
+            <a href="#"><i class="fa-regular fa-gem"> </i> Lorem Ipsum</a>
+          </li><li>
+            <a href="#"><i class="fa-regular fa-gem"> </i> Lorem Ipsum</a>
+          </li><li>
+            <a href="#"><i class="fa-regular fa-gem"> </i>  Lorem Ipsum</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="copy">
+  <div class="webcopy">
+    <p>myOriginalWebsite&copy chazzholic2025 </p>
+  </div>
+  
+</div>
+
+
+
+
+
+
+
+<img src="Image/DI-01.png" onclick="topFunction()" id="myBtn" title="Go to top">
+
+
+
+
+
+
+
+
+
+
+
+
+      
+   
+
+    <script src="script.js"></script>
+  </body>
+</html>

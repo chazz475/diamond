@@ -1,0 +1,1156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: 0;
+  scroll-behavior: smooth;
+}
+@font-face {
+  font-family: bebasnue;
+  src: url(font/BebasNeue-Regular.otf);
+}
+
+body {
+  background-color: rgb(230, 230, 230);
+}
+/* ----------------------------------------------------------ini adalah bagian header saja tidak termasuk navigatornya*/
+header {
+  align-items: center;
+  background-color: rgb(15, 15, 15);
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
+header ul li {
+  text-align: center;
+  font-family: poppins;
+  list-style-type: none;
+}
+header ul li a {
+  text-align: left;
+  font-size: 16px;
+  color: white;
+}
+
+header ul li span {
+  cursor: default;
+  color: orange;
+}
+/* Container for social icons */
+.icons {
+  position: fixed;
+  justify-content: center;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: #0a0a0a;
+  color: orange;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.icon:hover {
+  background-color: rgb(255, 232, 25);
+  transform: scale(0.7);
+}
+
+/* FontAwesome icons */
+.icon i {
+  pointer-events: none;
+}
+/* BAHASA */
+.content {
+  font-size: 20px;
+  margin-top: 20px;
+}
+/* END BAHASA ------------------------------- ini adalah bagian ending header saja tidak termasuk navigatornya*/
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 0px 10px;
+}
+
+.logo {
+  margin-right: 0px;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 45px;
+}
+
+nav .menuicon {
+  display: none;
+  font-size: 23px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  position: relative;
+  margin-left: 0px;
+}
+
+nav ul li a {
+  font-family: bebasnue;
+  color: rgb(44, 44, 44);
+  text-decoration: none;
+  font-size: 22px;
+  padding: 10px 25px;
+  display: block;
+}
+
+nav ul li a:hover {
+  background-color: orange;
+  border-radius: 0px;
+  height: 46px;
+  transition: all;
+  transition: 0.5s ease;
+}
+/* ---------------------------SEARCH CONTAINER --------------------------- */
+nav .search-container {
+  float: right;
+}
+
+nav input[type="text"] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+nav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: orange;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+nav .search-container button:hover {
+  background: #ccc;
+}
+/* ---------------------------ENDING SEARCH CONTAINER --------------------------- */
+/* Dropdown menu */
+nav ul .dropdown {
+  display: none;
+  position: absolute;
+  background-color: orange;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  top: 100%;
+  left: 0;
+  min-width: 133px;
+  border-radius: 0px;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+nav ul .dropdown li a {
+  color: white;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav ul .dropdown li a:hover {
+  background-color: #242424;
+  width: 100%;
+}
+
+/* Tampilkan dropdown saat hover */
+nav ul li:hover .dropdown {
+  display: block;
+}
+
+/* -------------------SLIDER IMAGE dan HERO TEXT------------------------------------------------------------------ */
+
+.container {
+  background-color: orange;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 24px;
+  margin-bottom: 100px;
+}
+
+/* Slider Container */
+.slider {
+  position: relative;
+  max-width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+/* Slides */
+.slides {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-container .hero-text {
+  position: absolute;
+  font-family: poppins;
+  top: 35%;
+  left: 5%;
+  width: 85%;
+}
+
+.hero-text h1 {
+  line-height: 1.6em;
+  margin: 0px;
+  font-family: poppins;
+  color: white;
+  text-shadow: 3px 7px 7px black;
+  font-size: 45px;
+  height: 100%;
+}
+
+.hero-text p {
+  line-height: 1.2em;
+  text-align: left;
+  font-size: 20px;
+  height: 100%;
+}
+
+.btn-hero {
+  width: 7em;
+  list-style-type: none;
+  font-family: poppins;
+  font-size: 30px;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.btn-hero:hover {
+  color: orange;
+  transition: all;
+  transition: 0.3s ease 0.5;
+}
+
+/* end Slidershow */
+
+/* -------------------ENDING SLIDER IMAGE ------------------------------------------------------------------ */
+
+/* -------------------CONTENT TEXT ------------------------------------------------------------------ */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content p {
+  font-family: bebasnue;
+}
+
+/* BAHASA--------------------------------------------------------------------------- */
+.content p1 {
+  font-size: 50px;
+  padding: 20px;
+  font-family: bebasnue;
+  letter-spacing: 1px;
+}
+
+.description {
+  font-family: Montserrat;
+  font-size: 35px;
+}
+
+.container-img {
+  position: relative;
+  width: 50%;
+  max-width: 35vh;
+}
+
+.img-container {
+  height: 750px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 70%;
+  gap: 80px;
+  display: flex;
+  list-style-type: none;
+}
+
+.container-img:hover .overlay {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  margin-bottom: 0px;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* -----------------------------------------------------------BAHASA--------------------------------------------------------------------------- */
+
+/* -----------------------------------------------PARALLAX IMAGE---------------------------------------------------------------------- */
+
+.parallax-img {
+  justify-content: center;
+  /* The image used */
+  background-image: url("Image/DB-01.png");
+
+  /* Set a specific height */
+  min-height: 800px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax-text {
+  justify-content: center;
+  display: flex;
+
+  background-color: orange;
+}
+
+.parallax-img .parallax-text p {
+  padding: 50px;
+  background-color: orange;
+  width: 80%;
+  display: flex;
+  font-family: poppins;
+  font-size: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+/* -----------------------------------------------ENDING PARALLAX IMAGE---------------------------------------------------------------------- */
+
+/* -----------------------------------------------TEAM IMAGE---------------------------------------------------------------------- */
+
+.ourteam {
+  background-color: #0a0a0a;
+  height: 6em;
+}
+
+.ourteam .our {
+  background-color: #0a0a0a;
+  height: 6em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: poppins;
+  color: orange;
+}
+
+.ourteam .our p {
+  color: white;
+  font-size: 25px;
+}
+
+.asal {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.muasal {
+  width: 80%;
+  flex-direction: column;
+  display: flex;
+}
+
+.mainteam {
+  height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 50px;
+}
+
+.mainteam .team1 img {
+  display: flex;
+}
+
+.mainteam .team2 img {
+  display: flex;
+}
+
+.mainteam h1 {
+  font-family: poppins;
+  font-size: 90px;
+}
+
+.mainteam p {
+  font-family: poppins;
+  font-size: 22px;
+}
+
+.mainbtn {
+  background-color: white;
+  box-shadow: 2px 5px 5px 7px rgb(175, 175, 175);
+  font-size: 22px;
+  height: 6vh;
+  margin-top: 30px;
+  width: 10em;
+  border-radius: 18px;
+}
+
+.mainbtn:hover {
+  cursor: pointer;
+  background-color: orange;
+  color: white;
+}
+
+.secteam {
+  height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 50px;
+}
+
+.secteam h1 {
+  font-family: poppins;
+  font-size: 90px;
+}
+
+.secteam p {
+  font-family: poppins;
+  font-size: 22px;
+}
+
+/* -----------------------------------------------CARD CONTAIN PAGE---------------------------------------------------------------------- */
+
+.cardcontain {
+  background-color: white;
+  display: flex;
+  height: 250px;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  width: 70%;
+  text-align: center;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.cardbox {
+  height: 200px;
+}
+
+.cardbox p {
+  font-family: poppins;
+}
+
+/* -----------------------------------------------END CARD CONTAIN PAGE---------------------------------------------------------------------- */
+
+/* -----------------------------------------------FOOTER PAGE---------------------------------------------------------------------- */
+.footer-contain {
+  display: flex;
+  background-color: rgb(0, 0, 0);
+  align-items: center;
+  justify-content: center;
+  height: 550px;
+}
+
+.footer {
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footerbox li {
+  list-style-type: none;
+  line-height: 50px;
+  text-align: center;
+}
+
+.footerbox li h1 {
+  font-family: poppins;
+  font-size: 42px;
+  color: orange;
+}
+
+.footerbox li a {
+  font-family: poppins;
+  font-size: 22px;
+  color: white;
+}
+
+.footerbox .footerbox1 li {
+  text-align: left;
+}
+
+.footerbox .footerbox2 li {
+  text-align: right;
+}
+
+.footerbox1 .icon {
+  display: inline-flex;
+  color: orange;
+  transition: all 0.3s ease;
+  font-size: 28px;
+}
+
+.footerbox1 .icon:hover {
+  background-color: #0a0a0a;
+}
+
+.copy {
+  background-color: orange;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copy p {
+  font-family: poppins;
+}
+
+#myBtn {
+  width: 9%;
+  display: none;
+  position: fixed;
+  bottom: 0px;
+  right: 10px;
+  z-index: 99;
+  cursor: pointer;
+  padding: 45px;
+  border-radius: 4px;
+}
+
+/* -----------------------------------------------END FOOTER PAGE---------------------------------------------------------------------- */
+
+/* media kecil */
+
+@media screen and (max-width: 768px) {
+  header ul {
+    gap: 30px;
+  }
+
+  nav {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo {
+    margin-left: 70px;
+  }
+
+  nav ul li {
+    position: relative;
+    margin-left: 0px;
+  }
+
+  nav ul li a {
+    font-size: 21px;
+    padding: 10px 23px;
+  }
+
+  nav .search-container {
+    margin-right: 65px;
+  }
+
+  .img-container {
+    height: 1100px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+  }
+
+  .overlay {
+    position: absolute;
+    margin-bottom: 200px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    transition: 0.5s ease;
+    opacity: 0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .asal {
+    height: 205vh;
+  }
+  .mainteam {
+    height: 105vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+    flex-direction: column;
+  }
+
+  .mainteam .team1 img {
+    display: flex;
+    width: 100%;
+  }
+
+  .mainteam .team2 img {
+    display: flex;
+    width: 100%;
+  }
+
+  .mainteam h1 {
+    font-family: poppins;
+    font-size: 50px;
+  }
+
+  .mainteam p {
+    font-family: poppins;
+    font-size: 18px;
+  }
+
+  .mainbtn {
+    background-color: white;
+    box-shadow: 2px 5px 5px 7px rgb(175, 175, 175);
+    font-size: 22px;
+    height: 6vh;
+    width: 10em;
+    border-radius: 18px;
+  }
+
+  .mainbtn:hover {
+    cursor: pointer;
+    background-color: orangered;
+    color: white;
+  }
+
+  .secteam {
+    height: 125vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+    flex-direction: column;
+  }
+
+  .secteam h1 {
+    font-family: poppins;
+    font-size: 50px;
+  }
+
+  .secteam p {
+    font-family: poppins;
+    font-size: 18px;
+  }
+
+  .mainbtn {
+    font-size: 22px;
+    height: 6vh;
+    width: 10em;
+    border-radius: 18px;
+  }
+  .cardcontain {
+    display: flex;
+    flex-wrap: wrap;
+    height: 850px;
+  }
+  .card {
+    width: 60%;
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-contain {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 1300px;
+  }
+
+  .footer {
+    width: 40%;
+    margin-left: 0px;
+  }
+
+  .footerbox {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .footerbox li {
+    list-style-type: none;
+    line-height: 50px;
+    text-align: center;
+  }
+
+  .footerbox li h1 {
+    font-family: poppins;
+    font-size: 42px;
+    color: orange;
+  }
+
+  .footerbox li a {
+    font-family: poppins;
+    font-size: 22px;
+    color: white;
+  }
+
+  .footerbox .footerbox1 li {
+    text-align: center;
+  }
+
+  .footerbox .footerbox2 li {
+    text-align: center;
+  }
+
+  .footerbox1 .icon {
+    display: inline-flex;
+    color: orange;
+    transition: all 0.3s ease;
+    font-size: 28px;
+  }
+
+  .footerbox1 .icon:hover {
+    background-color: #0a0a0a;
+  }
+
+  #myBtn {
+    bottom: 0px;
+    right: 20px;
+    z-index: 99;
+    cursor: pointer;
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 500px) {
+  header ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 300px;
+  }
+  .logo {
+    display: flex;
+    margin-left: 0px;
+  }
+
+  nav .menuicon {
+    display: flex;
+    margin-left: 10px;
+  }
+  nav .search-container {
+    display: none;
+  }
+
+  .container-img {
+    position: relative;
+    width: 40%;
+    max-width: 35vh;
+  }
+
+  .img-container {
+    height: 600px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    list-style-type: none;
+  }
+
+  .overlay {
+    position: absolute;
+    margin-bottom: 200px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    transition: 0.5s ease;
+    opacity: 0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .asal {
+    height: 180vh;
+  }
+  .mainteam {
+    padding: 15px;
+  }
+  .secteam {
+    padding: 15px;
+  }
+  .mainteam .team1 img {
+    width: 100%;
+  }
+  .secteam .team2 img {
+    width: 100%;
+  }
+
+  .footer-contain {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 1300px;
+  }
+
+  .footer {
+    width: 60%;
+    margin-left: 0px;
+  }
+
+  .footerbox {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .footerbox li {
+    list-style-type: none;
+    line-height: 50px;
+    text-align: center;
+  }
+
+  .footerbox li h1 {
+    font-family: poppins;
+    font-size: 42px;
+    color: orange;
+  }
+
+  .footerbox li a {
+    font-family: poppins;
+    font-size: 22px;
+    color: white;
+  }
+
+  .footerbox .footerbox1 li {
+    text-align: center;
+  }
+
+  .footerbox .footerbox2 li {
+    text-align: center;
+  }
+
+  .footerbox1 .icon {
+    display: inline-flex;
+    color: orange;
+    transition: all 0.3s ease;
+    font-size: 28px;
+  }
+
+  .footerbox1 .icon:hover {
+    background-color: #0a0a0a;
+  }
+
+  #myBtn {
+    bottom: 0px;
+    right: 0px;
+    z-index: 99;
+    cursor: pointer;
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header ul {
+    flex-direction: column;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 220px;
+  }
+  nav .menuicon {
+    display: flex;
+  }
+
+  .container-img {
+    position: relative;
+    width: 90%;
+    max-width: 35vh;
+  }
+
+  .img-container {
+    height: 1750px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    gap: 0px;
+    display: flex;
+    list-style-type: none;
+  }
+
+  .container-img:hover .overlay {
+    opacity: 1;
+  }
+
+  .overlay {
+    position: absolute;
+    margin-bottom: 0px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    transition: 0.5s ease;
+    opacity: 0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .muasal {
+    height: 200vh;
+  }
+
+  .mainteam {
+    padding: 10px;
+  }
+  .secteam {
+    padding: 10px;
+  }
+  .mainteam .team1 img {
+    width: 100%;
+  }
+  .secteam .team2 img {
+    width: 100%;
+  }
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .footer-contain {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 1500px;
+  }
+
+  #myBtn {
+    width: 15%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  header ul {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 120px;
+  }
+  .content p1 {
+    font-size: 40px;
+  }
+
+  .text-container .hero-text {
+    position: absolute;
+    font-family: poppins;
+    top: 25%;
+    left: 5%;
+    width: 95%;
+  }
+
+  .hero-text h1 {
+    line-height: 1em;
+    margin: 0px;
+    font-family: poppins;
+    color: white;
+    text-shadow: 3px 7px 7px black;
+    font-size: 45px;
+    height: 100%;
+  }
+
+  .hero-text p {
+    line-height: 1.2em;
+    text-align: left;
+    font-size: 18px;
+    height: 100%;
+  }
+
+  .btn-hero {
+    width: 7em;
+    list-style-type: none;
+    font-family: poppins;
+    font-size: 30px;
+    border-radius: 10px;
+    height: 100%;
+  }
+
+  .content h1 {
+    font-size: 18px;
+    letter-spacing: 0px;
+  }
+  .content p {
+    padding: 14px;
+    letter-spacing: 0.5px;
+  }
+
+  .container-img {
+    position: relative;
+    width: 90%;
+    max-width: 35vh;
+  }
+
+  .img-container {
+    height: 1750px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    gap: 0px;
+    display: flex;
+    list-style-type: none;
+  }
+
+  .container-img:hover .overlay {
+    opacity: 1;
+  }
+
+  .overlay {
+    position: absolute;
+    margin-bottom: 0px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    transition: 0.5s ease;
+    opacity: 0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .ourteam {
+    background-color: #0a0a0a;
+    height: 6em;
+  }
+
+  .ourteam .our {
+    background-color: #0a0a0a;
+    height: 8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: poppins;
+    color: orange;
+  }
+
+  .asal {
+    height: 190vh;
+    margin-top: 20px;
+  }
+  .ourteam .our h1 {
+    font-size: 22px;
+  }
+
+  .ourteam .our p {
+    font-size: 16px;
+  }
+
+  .muasal {
+    height: 190vh;
+  }
+
+  .mainteam {
+    padding: 10px;
+  }
+  .secteam {
+    padding: 10px;
+  }
+  .mainteam .team1 img {
+    width: 100%;
+  }
+  .secteam .team2 img {
+    width: 100%;
+  }
+
+  #myBtn {
+    width: 15%;
+  }
+}
